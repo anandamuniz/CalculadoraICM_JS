@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+<div class="container"> 
+    <div id="calculoInicial">
+        <h2>Calculadora de IMC</h2>
+
+        <div class="entradaDados" id="entradaDados">
+            <label for="altura">Informe sua altura (m e cm):
+              <br>
+              <input type="text" name="altura" id="altura" placeholder="Exemplo 1,85">
+            </label>
+            <br>
+            <label for="peso">Informe seu Peso (kg):
+                <br>
+                <input type="text" name="peso" id="peso" placeholder="Exemplo 70,5">
+            </label>
+        </div>
+
+        <div class="botao">
+            <button type="submit" class="calcular" id="calcular" onclick="CalcularIMC()">Calcular</button>
+            <button type="submit" class="limpar" id="limpar" onclick="Limpar()">Limpar</button>
+        </div>
+
+    </div>
+
+
+    <div class="saidaDados" id="saidaDados">
+        <h2>Seu IMC: <span id="dadoIMC"></span></h2>
+        <h3>Situação atual: <span id="situacao"></span></h3>
+        <p>Confira as classificações</p>
+        <table>
+           <thead>
+            <tr> 
+                <th> IMC </th>   
+                <th>Classificação</th>
+            </tr>
+           </thead>
+           <tbody>
+               <tr>
+                   <td> Menor que 18,5 </td>
+                   <td> Abaixo do peso </td>
+               </tr>
+               <tr>
+                   <td> Entre 18,5 e 24,9 </td>
+                   <td> Peso ideal </td>
+               </tr>            
+               <tr>
+                   <td> Entre 25 e 29,9 </td>
+                   <td> Sobrepeso </td>
+               </tr>            
+               <tr>
+                   <td> Entre 30 e 34,9 </td>
+                   <td> Obesidade grau 1</td>
+               </tr>            
+               <tr>
+                   <td> Entre 35 e 39,9 </td>
+                   <td> Obesidade grau 2 </td>
+               </tr>
+               <tr>
+                   <td> Maior que 40 </td>
+                   <td> Obesidade grau 3 </td>
+               </tr>
+           </tbody> 
+        </table>
+
+        <button type="submit" class="voltar" onclick="Voltar()">Voltar</button>
+    </div>
+</div>        
+
+    <script src="./script.js"></script>
+
+
+
+</body>
+</html>
